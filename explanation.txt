@@ -1,0 +1,20 @@
+FastAPI API Testing with Pytest
+
+1. **FastAPI App (main.py)**
+   - Defines an API with:
+     - `GET /users/{user_id}` to fetch a user.
+     - `POST /users` to create a new user.
+   - Uses Pydantic for input validation.
+
+2. **Unit Testing with Pytest (test_main.py)**
+   - `TestClient` allows testing without running a real server.
+   - `pytest.fixture` helps reuse test setup.
+   - Multiple test cases:
+     - Fetch existing/non-existing users.
+     - Create valid/invalid users.
+
+3. **Steps to Run Tests**
+   - Install dependencies: `pip install fastapi uvicorn pytest httpx`
+   - Run tests: `pytest -v`
+   - Verify output (all tests should pass).
+
